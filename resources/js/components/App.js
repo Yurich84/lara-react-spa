@@ -17,7 +17,7 @@ export default class App extends Component {
                     <Layout.Col md="8" lg="6">
                         <SideBar />
                     </Layout.Col>
-                    <Layout.Col md="6" lg="18">
+                    <Layout.Col md="16" lg="18">
                         <Content />
                     </Layout.Col>
                 </Layout.Row>
