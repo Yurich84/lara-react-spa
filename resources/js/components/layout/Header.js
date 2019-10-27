@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {routes} from '../../routes';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { Switch, Route, Link } from 'react-router-dom'
 
 export default class Header extends Component {
     render(){
@@ -15,7 +15,6 @@ export default class Header extends Component {
                         {routes.map((route, index) => (
                             <Link key={index} className="nav-item nav-link" to={route.path}>{route.name}</Link>
                         ))}
-                      {/*<Link className="nav-item nav-link" to="/">Home</Link>*/}
                     </div>
                   </div>
                 </nav>

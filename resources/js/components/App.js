@@ -11,15 +11,15 @@ export default class App extends Component {
     render() {
 
         return (
-            <div>
+            <div className="container">
                 <Header />
                 <Layout.Row gutter="20">
-                    {/*<Layout.Col span="6">*/}
-                        {/*<SideBar />*/}
-                    {/*</Layout.Col>*/}
-                    {/*<Layout.Col span="18">*/}
+                    <Layout.Col md="8" lg="6">
+                        <SideBar />
+                    </Layout.Col>
+                    <Layout.Col md="6" lg="18">
                         <Content />
-                    {/*</Layout.Col>*/}
+                    </Layout.Col>
                 </Layout.Row>
             </div>
         );

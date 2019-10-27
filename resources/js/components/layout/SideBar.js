@@ -7,19 +7,9 @@ export default class SideBar extends Component {
 
     render(){
         return (
-            <div style={{ display: "flex" }}>
-                <div
-                    style={{
-                        padding: "10px",
-                        width: "40%",
-                        background: "#f0f0f0"
-                    }}
-                >
-
-                    <Link className="nav-item nav-link" to="/search">Search</Link>
-                    <Link className="nav-item nav-link" to="/test">Test</Link>
-                </div>
-
+            <div>
+                <Link className="nav-item nav-link" to="/search">Search</Link>
+                <Link className="nav-item nav-link" to="/test">Test</Link>
             </div>
         )
     }
