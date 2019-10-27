@@ -49,7 +49,7 @@ export default class Header extends Component {
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="sf-menu navbar-nav mr-auto">
-                            <li className="nav-item"><a className="nav-link" href="{{ route('main') }}">Главная</a></li>
+                            <li className="nav-item"><a className="nav-link" href="/">Главная</a></li>
 
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категории</a>
