@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import {Layout} from 'element-react';
 
-import Header from './layout/Header';
-import SideBar from './layout/SideBar';
-import Content from './layout/Content';
+import Header       from './layout/Header';
+import Breadcrumbs  from './layout/Breadcrumbs';
+import Footer  from './layout/Footer';
+import SideBar      from './layout/SideBar';
+import Content      from './layout/Content';
 
 
 export default class App extends Component {
@@ -21,6 +23,7 @@ export default class App extends Component {
                         <Content />
                     </Layout.Col>
                 </Layout.Row>
+                <Footer />
             </div>
         );
     }
