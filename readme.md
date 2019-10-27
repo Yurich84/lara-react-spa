@@ -1,3 +1,6 @@
+<p align="center"> 
+<img height="80" src="https://laravel.com/img/logomark.min.svg">
+</p>
 
 # Laravel + React + ElementUI 2.x
 
