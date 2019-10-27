@@ -1,2 +1,3 @@
 *.sqlite
 *.sqlite-journal
+!prop_db.sqlite

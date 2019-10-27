@@ -13,5 +13,5 @@ yarn-error.log
 .phpstorm.meta.*
 _ide*
 .bash_profile
-/.idea/
+.idea
 /keys/
