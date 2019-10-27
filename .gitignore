@@ -1,5 +1,6 @@
 /node_modules
 /public_html/hot
+/public_html/images
 /public_html/css/app.css
 /public_html/js/app.js
 /public_html/storage
