@@ -11,7 +11,7 @@ export default class App extends Component {
     render() {
 
         return (
-            <div className="container">
+            <div className="container" id="sidebar">
                 <Header />
                 <Layout.Row gutter="20">
                     <Layout.Col md="8" lg="6">
