@@ -10,6 +10,8 @@
     </head>
     <body>
     <div id="root"></div>
+    <script src="{{ asset("compiled/js/vendor.js") }}" charset="utf-8"></script>
+    <script src="{{ asset("compiled/js/manifest.js") }}" charset="utf-8"></script>
     <script src="{{ asset("compiled/js/app.js") }}" charset="utf-8"></script>
     </body>
 </html>
