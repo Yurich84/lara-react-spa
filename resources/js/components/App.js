@@ -15,11 +15,9 @@ export default class App extends Component {
         return (
             <div className="container" id="sidebar">
                 <Header />
+                <br/>
                 <Layout.Row gutter="20">
-                    <Layout.Col md="8" lg="6">
-                        <SideBar />
-                    </Layout.Col>
-                    <Layout.Col md="16" lg="18">
+                    <Layout.Col span="24">
                         <Content />
                     </Layout.Col>
                 </Layout.Row>

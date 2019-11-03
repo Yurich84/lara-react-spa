@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class Search extends React.Component { 
+export default class Search extends React.Component {
 
 	constructor() {
 		super();
@@ -22,7 +22,7 @@ export default class Search extends React.Component {
                 garages: 0,
                 name: ''
 			},
-		}
+		};
 		this.fetchProperties = this.fetchProperties.bind(this);
 	}
 
@@ -32,7 +32,7 @@ export default class Search extends React.Component {
     fetchProperties(item) {
     	let searchParams = Object.assign({}, this.state.searchParams);
     	if(!!item) searchParams[item.target.name] = item.target.value;
-    	this.setState({searchParams})
+    	this.setState({searchParams});
 
         this.setState({showSpinner: true});
         axios.post('/api/search', {
@@ -68,7 +68,7 @@ export default class Search extends React.Component {
         this.serchForm.reset();
     }
 
-    componentWillMount() {
+    componentDidMount() {
 		this.fetchStartParams();
     }
 

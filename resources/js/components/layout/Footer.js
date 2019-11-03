@@ -28,7 +28,7 @@ export default class Footer extends Component {
 
                 <Layout.Row gutter="20">
                     <Layout.Col md="8" classname="column-footer">
-                        <h6>Links</h6>
+                        <h5>Links</h5>
                         <ul className="footerbar">
                             <li><Link className="nav-link" to='/'>Home</Link></li>
                             <li><Link className="nav-link" to='/'>Home</Link></li>
@@ -37,7 +37,7 @@ export default class Footer extends Component {
                     </Layout.Col>
 
                     <Layout.Col md="8" classname="column-footer">
-                        <h6>График работы</h6>
+                        <h5>График работы</h5>
                         <ul className="footerbar">
                             <li>24 часа в сутки</li>
                             <li>7 дней в неделю</li>
@@ -56,13 +56,12 @@ export default class Footer extends Component {
                     </Layout.Col>
 
                     <Layout.Col md="8" classname="column-footer">
-                        <h6>Контакты</h6>
+                        <h5>Contacts</h5>
                         <ul className="footerbar">
                             <li><i className="fa fa-location-arrow"> </i> <span>ADDRESS</span></li>
                             <li><i className="fa fa-phone"> </i>
                                 <span>+7 ZIP
-                                    <span className="show_phone">Показать телефон</span>
-                                    <a href="tel:+7 " className="phone_number">PHONE</a>
+                                    <a href="tel:+7 PHONE" className="phone_number">PHONE</a>
                                 </span>
                             </li>
                             <li><i className="fa fa-clock"> </i> <span>Пн - Вс: 10:00 - 18:00</span></li>
