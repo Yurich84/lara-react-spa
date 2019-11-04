@@ -12,12 +12,11 @@
     "dependencies": {
         "@babel/preset-react": "^7.0.0",
         "@fortawesome/fontawesome-free": "^5.2",
+        "antd": "^3.25.0",
         "axios": "^0.19",
         "babel-runtime": "^6.26.0",
         "bootstrap": "^4.1.1",
         "cross-env": "^5.1",
-        "element-react": "^1.4.34",
-        "element-theme-default": "^1.4.13",
         "jquery": "^3.2",
         "laravel-mix": "^4.0.7",
         "lodash": "^4.17.13",
@@ -26,8 +25,12 @@
         "react-dom": "^16.2.0",
         "react-hot-loader": "^4.12.15",
         "react-router-dom": "^5.0.1",
-        "resolve-url-loader": "^2.3.1",
+        "resolve-url-loader": "^2.3.1"
+    },
+    "devDependencies": {
         "sass": "^1.15.2",
-        "sass-loader": "^7.1.0"
+        "sass-loader": "^7.1.0",
+        "less": "^2.7.2",
+        "less-loader": "^5.0.0"
     }
 }

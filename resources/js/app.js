@@ -4,13 +4,15 @@ import React, { Component } from 'react';
 import {render} from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
-import 'element-theme-default';
-
-import { i18n } from 'element-react'
-import locale from 'element-react/src/locale/lang/en'
-
-i18n.use(locale);
+import { ConfigProvider } from 'antd';
+import enUS from 'antd/es/locale/en_US';
 
 import App from './components/App';
 
-render(<Router><App/></Router>, document.getElementById('root'));
+render(
+    <ConfigProvider locale={enUS}>
+        <Router>
+            <App/>
+        </Router>
+    </ConfigProvider>
+, document.getElementById('root'));

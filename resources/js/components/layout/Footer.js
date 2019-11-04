@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Layout, Form, Button} from 'element-react';
+import {Row, Col, Button, Form} from 'antd';
 import { Switch, Route, Link } from 'react-router-dom'
 
 
@@ -26,17 +26,17 @@ export default class Footer extends Component {
         return (
             <footer>
 
-                <Layout.Row gutter="20">
-                    <Layout.Col md="8" classname="column-footer">
+                <Row gutter={20}>
+                    <Col span={8} className="column-footer">
                         <h5>Links</h5>
                         <ul className="footerbar">
                             <li><Link className="nav-link" to='/'>Home</Link></li>
                             <li><Link className="nav-link" to='/'>Home</Link></li>
                             <li><Link className="nav-link" to='/'>Home</Link></li>
                         </ul>
-                    </Layout.Col>
+                    </Col>
 
-                    <Layout.Col md="8" classname="column-footer">
+                    <Col span={8} className="column-footer">
                         <h5>График работы</h5>
                         <ul className="footerbar">
                             <li>24 часа в сутки</li>
@@ -44,7 +44,7 @@ export default class Footer extends Component {
                         </ul>
                         <br/>
                         <div className="search-art">
-                            <Form inline={true} onSubmit={this.handleSubmit.bind(this)} className="demo-form-inline">
+                            <Form layout="inline" onSubmit={this.handleSubmit.bind(this)} className="demo-form-inline">
                                 <Form.Item>
                                     <input type="name" placeholder="Name" name="name" className="form-control" />
                                 </Form.Item>
@@ -53,9 +53,9 @@ export default class Footer extends Component {
                                 </Button>
                             </Form>
                         </div>
-                    </Layout.Col>
+                    </Col>
 
-                    <Layout.Col md="8" classname="column-footer">
+                    <Col span={8} className="column-footer">
                         <h5>Contacts</h5>
                         <ul className="footerbar">
                             <li><i className="fa fa-location-arrow"> </i> <span>ADDRESS</span></li>
@@ -67,8 +67,8 @@ export default class Footer extends Component {
                             <li><i className="fa fa-clock"> </i> <span>Пн - Вс: 10:00 - 18:00</span></li>
                         </ul>
 
-                    </Layout.Col>
-                </Layout.Row>
+                    </Col>
+                </Row>
 
                 <div className="row footer-bottom">
                     <div className="col-12 col-sm-6"><p> App Name</p></div>

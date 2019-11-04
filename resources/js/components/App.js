@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import {Layout} from 'element-react';
+import {Row, Col} from 'antd';
 
 import Header       from './layout/Header';
 import Breadcrumbs  from './layout/Breadcrumbs';
 import Footer  from './layout/Footer';
-import SideBar      from './layout/SideBar';
 import Content      from './layout/Content';
 
 
@@ -16,11 +15,11 @@ export default class App extends Component {
             <div className="container" id="sidebar">
                 <Header />
                 <br/>
-                <Layout.Row gutter="20">
-                    <Layout.Col span="24">
+                <Row gutter={20}>
+                    <Col span={24}>
                         <Content />
-                    </Layout.Col>
-                </Layout.Row>
+                    </Col>
+                </Row>
                 <Footer />
             </div>
         );
