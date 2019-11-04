@@ -1,22 +1,22 @@
 <?php
 
-use Illuminate\Http\Request;
+Route::group(['prefix' => 'pages'], function () {
+    Route::get('/',     'PagesController@index');
+    Route::get('{id}',  'PagesController@show');
+});
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
+Route::group(['prefix' => 'categories'], function () {
+    Route::get('/',     'CategoryController@index');
+    Route::get('{slug}',  'CategoryController@show');
+});
 
-//Route::middleware('auth:api')->get('/user', function (Request $request) {
-//    return $request->user();
-//});
+Route::group(['prefix' => 'models'], function () {
+    Route::get('/{category}',  'ProductModelsController@getByCategory');
+    Route::get('{id}',          'ProductModelsController@show');
+});
 
-Route::get('start_params', 'PropertyC@start_params');
-
-Route::post('search', 'PropertyC@search');
+Route::group(['prefix' => 'products'], function () {
+    Route::get('/{category}',  'ProductModelsController@getByCategory');
+    Route::get('/{model}',     'ProductModelsController@getByModel');
+    Route::get('{id}',          'ProductsController@show');
+});

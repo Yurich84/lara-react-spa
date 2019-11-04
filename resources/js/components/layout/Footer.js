@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Row, Col, Button, Form} from 'antd';
+import {Row, Col, Button, Form, Input} from 'antd';
 import { Switch, Route, Link } from 'react-router-dom'
 
 
@@ -27,7 +27,7 @@ export default class Footer extends Component {
             <footer>
 
                 <Row gutter={20}>
-                    <Col span={8} className="column-footer">
+                    <Col xs={24} md={8} className="column-footer">
                         <h5>Links</h5>
                         <ul className="footerbar">
                             <li><Link className="nav-link" to='/'>Home</Link></li>
@@ -36,7 +36,7 @@ export default class Footer extends Component {
                         </ul>
                     </Col>
 
-                    <Col span={8} className="column-footer">
+                    <Col xs={24} md={8} className="column-footer">
                         <h5>График работы</h5>
                         <ul className="footerbar">
                             <li>24 часа в сутки</li>
@@ -46,7 +46,7 @@ export default class Footer extends Component {
                         <div className="search-art">
                             <Form layout="inline" onSubmit={this.handleSubmit.bind(this)} className="demo-form-inline">
                                 <Form.Item>
-                                    <input type="name" placeholder="Name" name="name" className="form-control" />
+                                    <Input type="name" placeholder="Name" name="name" className="form-control" />
                                 </Form.Item>
                                 <Button type="primary" onClick={this.handleSubmit.bind(this)}>
                                     <i className="fa fa-search"> </i>
@@ -55,7 +55,7 @@ export default class Footer extends Component {
                         </div>
                     </Col>
 
-                    <Col span={8} className="column-footer">
+                    <Col xs={24} md={8} className="column-footer">
                         <h5>Contacts</h5>
                         <ul className="footerbar">
                             <li><i className="fa fa-location-arrow"> </i> <span>ADDRESS</span></li>

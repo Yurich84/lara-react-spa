@@ -3,7 +3,29 @@ import {routes} from '../../routes';
 import { Switch, Route, Link } from 'react-router-dom'
 
 export default class Header extends Component {
-    render(){
+    constructor() {
+        super();
+        this.state = {
+            categoryList: []
+        }
+    }
+
+    componentDidMount() {
+        this.fetchCategories();
+    }
+
+    /**
+     * Get Categories
+     */
+    fetchCategories() {
+        axios.get('/api/categories').then(response => {
+            this.setState({categoryList: response.data});
+        }).catch(error => {
+            console.log(error);
+        });
+    }
+
+    render() {
         return (
             <div>
 
@@ -22,9 +44,9 @@ export default class Header extends Component {
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категории</a>
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    {routes.map((route, index) => (
+                                    {this.state.categoryList.map((category, index) => (
                                         <li key={index}>
-                                            <Link className="dropdown-item" to={route.path}>{route.name}</Link>
+                                            <Link className="dropdown-item" to={'/category/' + category.slug}>{category.name}</Link>
                                         </li>
                                     ))}
 
@@ -33,17 +55,19 @@ export default class Header extends Component {
                             </li>
 
                             {routes.map((route, index) => (
+                                route.show ?
                                 <li key={index+'_'} className="nav-item">
                                     <Link className="nav-link" to={route.path}>{route.name}</Link>
                                 </li>
+                                : ''
                             ))}
 
                         </ul>
 
                     </div>
                 </nav>
-            </div>
 
+            </div>
         )
     }
 }

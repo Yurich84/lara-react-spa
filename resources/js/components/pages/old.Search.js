@@ -148,7 +148,7 @@ export default class Search extends React.Component {
 			                <img src="/imgs/loader.gif" />
 			            </div>
 	        		)
-		            : (this.state.items.length > 0) 
+		            : (this.state.items.length > 0)
 		            ? (
 						<div>
 			                <div className="row lead">
