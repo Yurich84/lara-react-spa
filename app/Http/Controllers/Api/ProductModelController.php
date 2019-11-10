@@ -12,12 +12,14 @@ class ProductModelController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @param Category $category
+     * @param $category
      * @return \Illuminate\Http\Response
      */
-    public function getByCategory(Category $category)
+    public function getByCategory($category)
     {
-        //
+        $category_model = Category::whereSlug($category)->first();
+        $models = $category_model->models()->with('products')->paginate();
+        return response()->json($models);
     }
 
 

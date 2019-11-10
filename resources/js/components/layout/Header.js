@@ -42,7 +42,7 @@ export default class Header extends Component {
                             </li>
 
                             <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категории</a>
+                                <a className="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     {this.state.categoryList.map((category, index) => (
                                         <li key={index}>
@@ -50,7 +50,7 @@ export default class Header extends Component {
                                         </li>
                                     ))}
 
-                                    <li><a className="dropdown-item text-danger" href="#">Распродажа</a></li>
+                                    <li><a className="dropdown-item text-danger" href="#">Sale</a></li>
                                 </ul>
                             </li>
 

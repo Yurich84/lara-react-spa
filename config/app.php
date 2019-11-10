@@ -2,7 +2,7 @@
 
 return [
 
-    'name' => env('APP_NAME', 'Furniture Store'),
+    'name' => env('APP_NAME', 'Web App'),
     'address' => env('APP_ADDRESS', 'Pr. Pobedy 26'),
     'zip' => env('APP_ZIP', 812),
     'phone' => env('APP_PHONE', '000-00-00'),

@@ -4,7 +4,7 @@ export default class Product extends Component {
 	render() {
 		return (
 			<div>
-				<h4 style={{ textAlign: 'center' }}>Product</h4>
+				<h1>Product</h1>
 			</div>
 		)
 	}

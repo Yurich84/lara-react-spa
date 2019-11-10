@@ -4,7 +4,7 @@ export default class About extends React.Component {
 	render() {
 		return (
 			<div>
-				<h4 style={{ textAlign: 'center' }}>About us page</h4>
+				<h1>About us page</h1>
 			</div>
 		)
 	}

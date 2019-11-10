@@ -30,8 +30,8 @@ export default class Footer extends Component {
                     <Col xs={24} md={8} className="column-footer">
                         <h5>Links</h5>
                         <ul className="footerbar">
-                            <li><Link className="nav-link" to='/'>About</Link></li>
-                            <li><Link className="nav-link" to='/'>Test</Link></li>
+                            <li><Link className="nav-link" to='about'>About</Link></li>
+                            <li><Link className="nav-link" to='test'>Test</Link></li>
                         </ul>
                     </Col>
 
