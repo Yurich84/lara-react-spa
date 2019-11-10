@@ -15,7 +15,7 @@ export default class Category extends Component {
     /**
      * Load Category
      */
-    loadCategory(slug) {
+    fetchCategory(slug) {
         return axios.get('/api/categories/'+slug).then(response => {
             this.setState({category: response.data});
         }).catch(error => { console.log(error) });
@@ -24,7 +24,7 @@ export default class Category extends Component {
     /**
      * Load Product Models
      */
-    loadModels(slug) {
+    fetchModels(slug) {
         this.setState({loadingModels: true});
         axios.get('/api/models/by_category/'+slug).then(response => {
             this.setState({models: response.data.data});
@@ -34,15 +34,15 @@ export default class Category extends Component {
     };
 
     componentDidMount() {
-        this.loadCategory(this.props.match.params.slug).then(() => {
-            this.loadModels(this.props.match.params.slug)
+        this.fetchCategory(this.props.match.params.slug).then(() => {
+            this.fetchModels(this.props.match.params.slug)
         });
     }
 
     componentWillReceiveProps(nextProps) {
         if (this.props.match.params.slug !== nextProps.match.params.slug) {
-            this.loadCategory(nextProps.match.params.slug).then(
-                this.loadModels(nextProps.match.params.slug)
+            this.fetchCategory(nextProps.match.params.slug).then(
+                this.fetchModels(nextProps.match.params.slug)
             );
         }
     }
